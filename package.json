@@ -1,4 +1,15 @@
 {
+  "name": "nextsjs-domain-search",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/brokenmold/nextjs-domain-search.git",
+  "author": "brokenmold <jason@broken-mold.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev -p 3050",
+    "build": "next build",
+    "start": "next start -p 3051"
+  },
   "dependencies": {
     "next": "^10.2.3",
     "react": "^17.0.2",
