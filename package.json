@@ -6,7 +6,7 @@
   "author": "brokenmold <jason@broken-mold.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev -p 3050",
+    "dev": "next dev -p 3051",
     "build": "next build",
     "start": "next start -p 3051"
   },
