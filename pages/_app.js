@@ -3,6 +3,9 @@ import Head from 'next/head'
 
 import '../styles/_global.scss'
 
+import Header from '../components/_header'
+
+
 export default function App({ Component, pageProps }) {
   return (
     <div>
@@ -10,6 +13,8 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Domain Search</title>
       </Head>
+
+      <Header/>
 
       <div className='containerWrapper'>
         <div className='container'>
