@@ -13,6 +13,8 @@ export default function Home() {
           Basic Domain Search using Next.js
         </div>
 
+        <i className='fad fa-code-branch'/>
+
       </main>
 
     </div>
