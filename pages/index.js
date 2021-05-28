@@ -1,10 +1,11 @@
 import Head from 'next/head'
 
+import style from '../styles/home.module.scss'
+
 export default function Home() {
   return (
     <div>
       <Head></Head>
-
       <main>
 
         <h1>Domain Search</h1>
@@ -13,10 +14,11 @@ export default function Home() {
           Basic Domain Search using Next.js
         </div>
 
-        <i className='fad fa-code-branch'/>
+        <div className={style.icon}>
+          <div className='fad fa-sign fa-8x'/>
+        </div>
 
       </main>
-
     </div>
   )
 }
