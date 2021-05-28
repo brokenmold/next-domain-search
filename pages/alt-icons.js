@@ -21,7 +21,7 @@ export default function Home() {
           <div className='fad fa-stream fa-8x'/>
           <div className='fad fa-industry-alt fa-8x'/>
           <div className='fad fa-mind-share fa-8x'/>
-          <div className='fad fa-lamp-shade fa-8x'/>
+          <div className='fad fa-lamp-desk fa-8x'/>
           <div className='fad fa-coffee-pot fa-8x'/>
           <div className='fad fa-industry fa-8x'/>
           <div className='fad fa-analytics fa-8x'/>
