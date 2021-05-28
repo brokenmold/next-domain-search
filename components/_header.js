@@ -1,14 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 
-import styles from '../styles/layout.header.module.scss'
+import style from '../styles/layout.header.module.scss'
 
 export default function Header() {
   return(
     <header>
       <div className='header-container'>
         <div>
-          <h1>Domain Search</h1>
+          <span className={style.title}>Domain Search</span>
         </div>
       </div>
     </header>
