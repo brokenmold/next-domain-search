@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import axios from 'axios'
 
 import style from '../styles/home.module.scss'
 
@@ -7,24 +8,39 @@ export default function Home() {
   const searchDomain = async event => {
     event.preventDefault()
 
-    // const res = await fetch(
-    //   'https://hooks.zapier.com/hooks/catch/123456/abcde',
-    //   {
-    //     body: JSON.stringify({
-    //       name: event.target.name.value
-    //     }),
-    //     headers: {
-    //       'Content-Type': 'application/json'
-    //     },
-    //     method: 'POST'
-    //   }
-    // )
+    const reqDotDev = axios.request({
+      method: 'GET',
+      url: 'https://domainr.p.rapidapi.com/v2/status',
+      params: {
+        'mashape-key': process.env.RAPIDAPI_KEY,
+        domain: `${event.target.term.value}.dev`
+      },
+      headers: {
+        'x-rapidapi-key': process.env.RAPIDAPI_KEY,
+        'x-rapidapi-host': 'domainr.p.rapidapi.com'
+      }
+    })
 
-    // const result = await res.json()
-    // result.user => 'Ada Lovelace'
+    const resDot = () => {
+      // *** Define Calls ***
+      axios.all([reqDotDev])
+      .then(axios.spread((...res) => {
 
-    console.log(event.target.term.value)
+        for (let i = 0; i < res.length; i++) {
+          const resDot = res[i].data.status[0]
 
+          console.log('Domain Res: ' + resDot.domain)
+
+          // document.getElementById(`output-${resDot.zone}`).innerHTML = `
+          //   ${resDot.domain} ${ isAvailable(resDot.summary) } <br />
+          // `
+        }
+      })).catch(errors => {
+        console.log(errors)
+      })
+    }
+
+    resDot()
   }
 
   return (
