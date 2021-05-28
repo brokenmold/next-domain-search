@@ -15,6 +15,6 @@ module.exports = {
     webpack5: true,
   },
   env : {
-    //
+    RAPIDAPI_KEY: process.env.RAPIDAPI_KEY
   }
 }
