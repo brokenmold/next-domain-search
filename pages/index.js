@@ -8,12 +8,14 @@ export default function Home() {
   const searchDomain = async event => {
     event.preventDefault()
 
+    const searchTerm = event.target.term.value.toLowerCase().replace(/\s+/g, '')
+
     const reqDotDev = axios.request({
       method: 'GET',
       url: 'https://domainr.p.rapidapi.com/v2/status',
       params: {
         'mashape-key': process.env.RAPIDAPI_KEY,
-        domain: `${event.target.term.value}.dev`
+        domain: `${searchTerm}.dev`
       },
       headers: {
         'x-rapidapi-key': process.env.RAPIDAPI_KEY,
@@ -31,9 +33,9 @@ export default function Home() {
 
           console.log('Domain Res: ' + resDot.domain)
 
-          // document.getElementById(`output-${resDot.zone}`).innerHTML = `
-          //   ${resDot.domain} ${ isAvailable(resDot.summary) } <br />
-          // `
+          document.getElementById(`output-${resDot.zone}`).innerHTML = `
+            ${resDot.domain} ${ isAvailable(resDot.summary) } <br />
+          `
         }
       })).catch(errors => {
         console.log(errors)
@@ -63,7 +65,20 @@ export default function Home() {
           <button type='submit'>Search</button>
         </form>
 
+        <div>
+          <div id='output-dev'></div>
+        </div>
+
       </main>
     </div>
   )
+}
+
+// Check Domain Available
+const isAvailable = (summary) => {
+  if (summary == 'inactive')
+    return '<i class="far fa-check"/> is availible!'
+  // else if (summary == 'active')
+  else
+    return '<i class="far fa-times"/> already taken'
 }
