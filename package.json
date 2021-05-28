@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev -p 3051",
     "build": "next build",
-    "start": "next start -p 3051"
+    "start": "next start -p 3052"
   },
   "dependencies": {
     "next": "^10.2.3",

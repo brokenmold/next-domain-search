@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }) {
 
       <Head>
         <title>Domain Search</title>
+        <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css' />
       </Head>
 
       <Header/>
