@@ -31,8 +31,6 @@ export default function Home() {
         for (let i = 0; i < res.length; i++) {
           const resDot = res[i].data.status[0]
 
-          console.log('Domain Res: ' + resDot.domain)
-
           document.getElementById(`output-${resDot.zone}`).innerHTML = `
             ${resDot.domain} ${ isAvailable(resDot.summary) } <br />
           `
