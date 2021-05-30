@@ -1,8 +1,5 @@
 import React from 'react'
-import Head from 'next/head'
 import axios from 'axios'
-
-import style from '../styles/home.module.scss'
 
 export default function Search() {
 
