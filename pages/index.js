@@ -11,9 +11,9 @@ export default function Home() {
 
         <h1>Domain Search</h1>
 
-        <div>
-          Basic Domain Search using Next.js
-        </div>
+        <h4>
+          Find your piece of digital real estate..
+        </h4>
 
         <div className={style.icon}>
           <div className='fad fa-sign fa-8x'/>
