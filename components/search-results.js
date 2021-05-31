@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
+import style from '../styles/components/search-results.module.scss'
+
 export default function Search() {
 
   const searchDomain = async event => {
@@ -29,9 +31,10 @@ export default function Search() {
         for (let i = 0; i < res.length; i++) {
           const resDot = res[i].data.status[0]
 
-          document.getElementById(`output-${resDot.zone}`).innerHTML = `
-            ${resDot.domain} ${ isAvailable(resDot.summary) } <br />
-          `
+          // document.getElementById(`output-${resDot.zone}`).innerHTML = `
+          //   ${resDot.domain} ${ isAvailable(resDot.summary) }<br />
+          // `
+          document.getElementById(`output-${resDot.zone}`).innerHTML = '<span className="far fa-check"/> is availible!'
         }
       })).catch(errors => {
         console.log(errors)
@@ -44,21 +47,21 @@ export default function Search() {
   // Check Domain Available
   const isAvailable = (summary) => {
     if (summary == 'inactive')
-      return '<span className="far fa-check"/> is availible!'
+      return '<span className="far fa-check"/> is availible!</div>'
     // else if (summary == 'active')
     else
-      return '<i className"far fa-times"/> already taken'
+      return '<span className"far fa-times"/> already taken'
   }
 
   return (
-    <div>
+    <div className={style.wrapper}>
       <form onSubmit={searchDomain}>
         <input id='term' type='text' autoComplete='term' required />
         <button type='submit'>Search</button>
       </form>
 
       <div>
-        <div id='output-dev'></div>
+        <div className={style.TestComponent} id='output-dev'></div>
       </div>
     </div>
   )
