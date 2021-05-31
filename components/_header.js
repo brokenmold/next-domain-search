@@ -10,11 +10,15 @@ export default function Header() {
         <div className={style.wrapper}>
 
           <div className={style.logo}>
-            <span className={style.title}>Domain Search</span>
+            <Link href='/'>
+              <a>
+                <span className={style.title}>Domain Search</span>
+              </a>
+            </Link>
           </div>
 
           <div className={style.nav}>
-            <a href='https://github.com/brokenmold/nextjs-domain-search' target='blank'>
+            <a className={style.nav} href='https://github.com/brokenmold/nextjs-domain-search' target='blank'>
               <span className='fab fa-github fa-2xl'/>Get The Code
             </a>
           </div>
