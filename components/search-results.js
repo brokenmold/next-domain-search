@@ -32,7 +32,7 @@ export default function Search() {
           const resDot = res[i].data.status[0]
 
           document.getElementById(`output-${resDot.zone}`).innerHTML = `
-            ${resDot.domain} ${ isAvailable(resDot.summary) }<br />
+            <${resDot.summary}>${resDot.domain} ${ isAvailable(resDot.summary) }<br />
           `
         }
       })).catch(errors => {

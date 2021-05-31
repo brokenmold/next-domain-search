@@ -1,10 +1,12 @@
 @import '_vars';
 
+  // **** COMPONENT ****
   section.wrapper {
     margin-top: 2rem;
     width: 100%;
   }
 
+  // **** SEARCH ****
   section.search {
     display: flex;
     justify-content: center;
@@ -16,17 +18,28 @@
   }
 
 
+  // **** RESULTS *****
   section.result {
     display: flex;
     justify-content: center;
-
-    // background: gainsboro;
-
     margin: 1rem 0;
     padding: 1rem;
     border-radius: 4px;
 
-    .item > img {
-      width: 30px;
+    // **** AVAILABLE & TAKEN ****
+    .item > active, .item >inactive {
+      img {
+        width: 30px;
+      }
+    }
+
+    // **** AVAILABLE ****
+    inactive {
+      background: green;
+    }
+
+    // **** TAKEN ****
+    active {
+      background: red;
     }
   }
