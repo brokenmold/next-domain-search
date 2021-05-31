@@ -1,10 +1,32 @@
 @import '_vars';
 
-  .wrapper {
+  section.wrapper {
     margin-top: 2rem;
+    width: 100%;
   }
 
-  // Component Test
-  .TestComponent {
-    color: red;
+  section.search {
+    display: flex;
+    justify-content: center;
+
+    background: coral;
+
+    padding: 1rem;
+    border-radius: 4px;
+  }
+
+
+  section.result {
+    display: flex;
+    justify-content: center;
+
+    // background: gainsboro;
+
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 4px;
+
+    .item > img {
+      width: 30px;
+    }
   }

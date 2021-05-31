@@ -31,10 +31,9 @@ export default function Search() {
         for (let i = 0; i < res.length; i++) {
           const resDot = res[i].data.status[0]
 
-          // document.getElementById(`output-${resDot.zone}`).innerHTML = `
-          //   ${resDot.domain} ${ isAvailable(resDot.summary) }<br />
-          // `
-          document.getElementById(`output-${resDot.zone}`).innerHTML = '<span className="far fa-check"/> is availible!'
+          document.getElementById(`output-${resDot.zone}`).innerHTML = `
+            ${resDot.domain} ${ isAvailable(resDot.summary) }<br />
+          `
         }
       })).catch(errors => {
         console.log(errors)
@@ -47,22 +46,26 @@ export default function Search() {
   // Check Domain Available
   const isAvailable = (summary) => {
     if (summary == 'inactive')
-      return '<span className="far fa-check"/> is availible!</div>'
+      return `<img src="../svg/trophy-solid.svg"/> is availible!</div>`
     // else if (summary == 'active')
     else
-      return '<span className"far fa-times"/> already taken'
+      return `<img src="../svg/car-crash-solid.svg"/> already taken`
   }
 
   return (
-    <div className={style.wrapper}>
-      <form onSubmit={searchDomain}>
-        <input id='term' type='text' autoComplete='term' required />
-        <button type='submit'>Search</button>
-      </form>
+    <section className={style.wrapper}>
 
-      <div>
-        <div className={style.TestComponent} id='output-dev'></div>
-      </div>
-    </div>
+      <section className={style.search}>
+        <form onSubmit={searchDomain}>
+          <input id='term' type='text' autoComplete='term' required />
+          <button type='submit'>Search</button>
+        </form>
+      </section>
+
+      <section className={style.result}>
+        <div className={style.item} id='output-dev'></div>
+      </section>
+
+    </section>
   )
 }
