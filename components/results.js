@@ -1,7 +1,7 @@
 import React from 'react'
-import style from '../styles/components/search-results.module.scss'
+import style from '../styles/comp.results.module.scss'
 
-export default function SearchModule() {
+export default function Results() {
 
   return (
     <section className={style.wrapper}>

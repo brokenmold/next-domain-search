@@ -1,9 +1,17 @@
 @import '_vars';
 
+// **************
+// **** PAGE ****
+section.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 // ******************
 // **** Hero Box ****
 section.heroBox {
-  //
+  width: 50%;
 
   div.icon {
     padding: 10px;
@@ -14,13 +22,14 @@ section.heroBox {
 // ********************
 // **** Search Box ****
 section.searchBox {
-  //
+  width: 50%;
 }
 
 
 // **** Afilliate Tag ****
 
 .digitalOcean {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;

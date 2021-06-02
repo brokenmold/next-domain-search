@@ -1,9 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 
-import style from '../styles/components/search-results.module.scss'
+import style from '../styles/comp.search.module.scss'
 
-export default function SearchResults() {
+export default function Search() {
 
   const searchDomain = async event => {
     event.preventDefault()

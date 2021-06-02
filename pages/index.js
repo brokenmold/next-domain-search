@@ -1,6 +1,6 @@
 import Head from 'next/head'
-// import SearchModule from '../components/search-module'
-import SearchResults from '../components/search-results'
+// import SearchModule from '../components/results'
+import Search from '../components/search'
 
 import style from '../styles/page.index.module.scss'
 
@@ -26,7 +26,7 @@ export default function Home() {
 
         {/* SEARCH BOX */}
         <section className={style.searchBox}>
-          <SearchResults/>
+          <Search/>
         </section>
 
         {/* RESULTS */}
