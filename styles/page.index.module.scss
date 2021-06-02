@@ -13,9 +13,18 @@ section.wrapper {
 section.heroBox {
   width: 50%;
 
-  div.icon {
+  .icon {
     padding: 10px;
     font-size: 26px;
+  }
+
+  h1 {
+    margin-top: 8px;
+    margin-bottom: 0px;
+  }
+
+  h4 {
+    margin-top: 8px;
   }
 }
 
