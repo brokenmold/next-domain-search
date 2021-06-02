@@ -1,0 +1,29 @@
+@import '_vars';
+
+// ******************
+// **** Hero Box ****
+section.heroBox {
+  //
+
+  div.icon {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+// ********************
+// **** Search Box ****
+section.searchBox {
+  //
+}
+
+
+// **** Afilliate Tag ****
+
+.digitalOcean {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 2rem;
+  font-size: 20px;
+}
