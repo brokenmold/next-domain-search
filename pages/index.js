@@ -13,15 +13,13 @@ export default function Home() {
 
         {/* HERO BOX */}
         <section className={style.heroBox}>
-          <h1>Domain Search</h1>
-
-          <h4>
-            Find your piece of digital real estate..
-          </h4>
-
           <div className={style.icon}>
             <div className='fad fa-sign fa-8x'/>
           </div>
+          <h1>Digital Real Estate</h1>
+          <h4>Let’s check out your domain options.</h4>
+
+
         </section>
 
         {/* SEARCH BOX */}
