@@ -11,6 +11,7 @@ export default function Home() {
 
       <section className={style.wrapper}>
 
+        {/* HERO BOX */}
         <section className={style.heroBox}>
           <h1>Domain Search</h1>
 
@@ -23,21 +24,20 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SEARCH BOX */}
         <section className={style.searchBox}>
-          {/* <SearchModule/> */}
+          <SearchResults/>
         </section>
 
-          <SearchResults/>
+        {/* RESULTS */}
+        <section className={style.result}>
+          <div className={style.item} id='output-dev'></div>
+        </section>
 
-          <section className={style.result}>
-            <div className={style.item} id='output-dev'></div>
-          </section>
-
-          <div className={style.digitalOcean}>
-            <a href='https://m.do.co/c/cb06502b2c00' target='_blank'><span class='fab fa-digital-ocean fa-2x'/> Powered by DigitalOcean</a>
-          </div>
-
-
+        {/* AFFILIATE TAG */}
+        <div className={style.digitalOcean}>
+          <a href='https://m.do.co/c/cb06502b2c00' target='_blank'><span class='fab fa-digital-ocean fa-2x'/> Powered by DigitalOcean</a>
+        </div>
 
       </section>
     </div>
