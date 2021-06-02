@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import style from '../styles/components/search-results.module.scss'
 
-export default function Search() {
+export default function SearchResults() {
 
   const searchDomain = async event => {
     event.preventDefault()
@@ -58,13 +58,13 @@ export default function Search() {
       <section className={style.search}>
         <form onSubmit={searchDomain}>
           <input id='term' type='text' autoComplete='term' required />
-          <button type='submit'>Search</button>
+          <button type='submit'>Search!</button>
         </form>
       </section>
 
-      <section className={style.result}>
+      {/* <section className={style.result}>
         <div className={style.item} id='output-dev'></div>
-      </section>
+      </section> */}
 
     </section>
   )
