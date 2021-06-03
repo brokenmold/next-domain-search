@@ -57,9 +57,19 @@ export default function Search() {
 
       <section className={style.search}>
         <form onSubmit={searchDomain}>
-          <input id='term' type='text' autoComplete='term' required />
-          <button id='search' type='submit'>SEARCH</button>
-          <button id='generate' type='generate'>GENERATE</button>
+
+          <div className={style.item}>
+            <input id='term' type='text' autoComplete='term' required />
+          </div>
+
+          <div className={style.item}>
+            <button id='search' type='submit'>SEARCH</button>
+          </div>
+
+          <div className={style.item}>
+            <button id='generate' type='generate'>GENERATE</button>
+          </div>
+
         </form>
       </section>
 
