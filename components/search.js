@@ -63,11 +63,11 @@ export default function Search() {
           </div>
 
           <div className={style.item}>
-            <button id='search' type='submit'>SEARCH</button>
+            <button className={style.search} type='submit'>SEARCH</button>
           </div>
 
           <div className={style.item}>
-            <button id='generate' type='generate'>GENERATE</button>
+            <button className={style.generate} type='generate'>GENERATE</button>
           </div>
 
         </form>
