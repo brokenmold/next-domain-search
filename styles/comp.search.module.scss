@@ -34,15 +34,20 @@
       margin: 9px 0;
 
       input {
-        width: 380px;
+        width: 360px;
         max-width: 80%;
-        height: 40px;
+        height: 60px;
         border-radius: 50px;
         border: 0;
-        padding: 0 20px;
-        font-size: 1.5rem;
+        padding: 0 30px;
+        font-size: 1.7rem;
         letter-spacing: 3px;
+        text-align: center;
         text-decoration: none;
+      }
+
+      input:focus, textarea:focus, select:focus{
+        outline: none;
       }
 
       button {
@@ -63,32 +68,5 @@
       button.generate {
         background: $pink;
       }
-    }
-  }
-
-
-  // **** RESULTS *****
-  section.result {
-    display: flex;
-    justify-content: center;
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 4px;
-
-    // **** AVAILABLE & TAKEN ****
-    .item > active, .item > inactive {
-      img {
-        width: 30px;
-      }
-    }
-
-    // **** AVAILABLE ****
-    inactive {
-      background: green;
-    }
-
-    // **** TAKEN ****
-    active {
-      background: red;
     }
   }

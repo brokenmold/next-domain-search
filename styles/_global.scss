@@ -47,6 +47,7 @@
   .containerWrapper {
     display: flex;
     justify-content: center;
+    align-content: center;
     background: $container-wrapper-background;
     width: 100vw;
   }
@@ -54,19 +55,19 @@
   .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    align-content: center;
 
     min-height: $container-min-height;
+    // height: 100%;
     padding: 1.5rem 1.5rem;
     background: $container-background;
     width: $app-max-width;
   }
 
-  main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  // main {
+  //   flex: 1;
+  // }
 
   // Layout >> Footer
 

@@ -6,24 +6,19 @@ $black:   #333333;
 $gray:    #707070;
 $blue:    #717BE3;
 
-
 // Layout >> Width
-$app-max-width: 1200px;
+$app-max-width: 1000px;
 $app-link-color: #ba0000;
 
 // Layout >> Header
-$header-background: #717be3;
-$header-height: 10px;
+$header-background: $blue;
+$header-height: 20px;
 
 // Layout >> Container
 $container-background: $orange;
 $container-wrapper-background: $orange;
-$container-min-height: calc(100vh - 40px - 60px);
+$container-min-height: calc(100vh - 116px);
 
 // Layout >> Footer
 $footer-background: #b8b8b8;
 $footer-height: 60px;
-
-// Buttons
-$button-search: #717be3;
-$button-generator: #8ee371;
