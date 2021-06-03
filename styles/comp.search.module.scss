@@ -14,6 +14,33 @@
     align-items: center;
     height: 100%;
     width: 100%;
+
+    form {
+      border: 1px solid black;
+      // display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input {
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
+    }
+
+    button {
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+    }
+
+    button > #search {
+      width: 400px;
+    }
+
+    button > #generate {
+
+    }
   }
 
 
