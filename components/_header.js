@@ -19,7 +19,8 @@ export default function Header() {
 
           <section className={style.nav}>
             <a className={style.nav} href='https://github.com/brokenmold/nextjs-domain-search' target='blank'>
-              <span className='fab fa-github fa-2xl'/>Get The Code
+              <span className='fab fa-github fa-2xl'/>
+              <span className={style.navText}>Get The Code</span>
             </a>
           </section>
 

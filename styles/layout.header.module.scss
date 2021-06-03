@@ -4,14 +4,13 @@
 // **** COMPONENET ****
 section.wrapper {
   display: flex;
-  // width: stretch;
   width: 100%;
 }
 
 // ********************
 // **** LOGO BOX ******
 section.logo {
-  width: stretch;
+  flex: auto;
 
   border: 1px solid black;
 
@@ -27,16 +26,11 @@ section.logo {
 // ********************
 // **** NAV BOX *******
 section.nav {
-  // width: stretch;
-  // align-self: flex-end;
-
-  min-width: 30vw;
+  min-width: 30px;
 
   align-self: center;
   text-align: right;
   font-weight: 600;
-
-  border: 1px solid black;
 
   span {
     padding: 6px;
@@ -44,5 +38,13 @@ section.nav {
 
   a:hover {
     text-decoration: underline;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  section.nav {
+    .navText {
+      display: none;
+    }
   }
 }
