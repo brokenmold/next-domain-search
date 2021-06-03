@@ -1,36 +1,48 @@
 @import '_vars';
 
-.wrapper {
+// ********************
+// **** COMPONENET ****
+section.wrapper {
   display: flex;
+  // width: stretch;
+  width: 100%;
+}
+
+// ********************
+// **** LOGO BOX ******
+section.logo {
   width: stretch;
 
-  // border: 1px white solid;
-
-  .logo {
-    width: stretch;
+  border: 1px solid black;
 
 
-    .title {
-      font-size: 2.25rem;
-      font-weight: 600;
-      line-height: 2.6rem;
-      padding-bottom: .6rem;
-    }
+  .title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 2.6rem;
+    padding-bottom: .6rem;
+  }
+}
+
+// ********************
+// **** NAV BOX *******
+section.nav {
+  // width: stretch;
+  // align-self: flex-end;
+
+  min-width: 30vw;
+
+  align-self: center;
+  text-align: right;
+  font-weight: 600;
+
+  border: 1px solid black;
+
+  span {
+    padding: 6px;
   }
 
-  .nav {
-    width: stretch;
-    // align-self: flex-end;
-    align-self: center;
-    text-align: right;
-    font-weight: 600;
-
-    span {
-      padding: 6px;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+  a:hover {
+    text-decoration: underline;
   }
 }
