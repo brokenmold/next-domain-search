@@ -107,7 +107,7 @@ export default function Search() {
   const getStatus = (summary, domain) => {
     const url = domain
     if (summary == 'inactive')
-      return `Availible!  <a href='https://domains.google.com/registrar/search?searchTerm=${domain}' target='_blank'><img src='../svg/cart-arrow-down-solid.svg' style='height: 28px;'/></a>`
+      return `Available!  <a href='https://domains.google.com/registrar/search?searchTerm=${domain}' target='_blank'><img src='../svg/cart-arrow-down-solid.svg' style='height: 28px;'/></a>`
     // else if (summary == 'active')
     else
       return `Already Taken`
