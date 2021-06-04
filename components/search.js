@@ -92,7 +92,7 @@ export default function Search() {
           `
 
           document.getElementById(`output-${resDot.zone}-status`).innerHTML = `
-            ${ getStatus(resDot.summary) }
+            ${ getStatus(resDot.summary, resDot.domain) }
           `
         }
       })).catch(errors => {
@@ -104,9 +104,10 @@ export default function Search() {
   }
 
   // Check Domain Available
-  const getStatus = (summary) => {
+  const getStatus = (summary, domain) => {
+    const url = domain
     if (summary == 'inactive')
-      return `Availible!  <img src='../svg/cart-arrow-down-solid.svg' style='height: 30px;'/>`
+      return `Availible!  <a href='https://domains.google.com/registrar/search?searchTerm=${domain}' target='_blank'><img src='../svg/cart-arrow-down-solid.svg' style='height: 28px;'/></a>`
     // else if (summary == 'active')
     else
       return `Already Taken`
