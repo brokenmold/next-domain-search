@@ -23,9 +23,61 @@ export default function Search() {
       }
     })
 
+    const reqDotIo = axios.request({
+      method: 'GET',
+      url: 'https://domainr.p.rapidapi.com/v2/status',
+      params: {
+        'mashape-key': process.env.RAPIDAPI_KEY,
+        domain: `${searchTerm}.io`
+      },
+      headers: {
+        'x-rapidapi-key': process.env.RAPIDAPI_KEY,
+        'x-rapidapi-host': 'domainr.p.rapidapi.com'
+      }
+    })
+
+    const reqDotCom = axios.request({
+      method: 'GET',
+      url: 'https://domainr.p.rapidapi.com/v2/status',
+      params: {
+        'mashape-key': process.env.RAPIDAPI_KEY,
+        domain: `${searchTerm}.com`
+      },
+      headers: {
+        'x-rapidapi-key': process.env.RAPIDAPI_KEY,
+        'x-rapidapi-host': 'domainr.p.rapidapi.com'
+      }
+    })
+
+    const reqDotNet = axios.request({
+      method: 'GET',
+      url: 'https://domainr.p.rapidapi.com/v2/status',
+      params: {
+        'mashape-key': process.env.RAPIDAPI_KEY,
+        domain: `${searchTerm}.net`
+      },
+      headers: {
+        'x-rapidapi-key': process.env.RAPIDAPI_KEY,
+        'x-rapidapi-host': 'domainr.p.rapidapi.com'
+      }
+    })
+
+    const reqDotOrg = axios.request({
+      method: 'GET',
+      url: 'https://domainr.p.rapidapi.com/v2/status',
+      params: {
+        'mashape-key': process.env.RAPIDAPI_KEY,
+        domain: `${searchTerm}.org`
+      },
+      headers: {
+        'x-rapidapi-key': process.env.RAPIDAPI_KEY,
+        'x-rapidapi-host': 'domainr.p.rapidapi.com'
+      }
+    })
+
     const resDot = () => {
       // *** Define Calls ***
-      axios.all([reqDotDev])
+      axios.all([reqDotDev, reqDotIo, reqDotCom, reqDotNet, reqDotOrg])
       .then(axios.spread((...res) => {
 
         for (let i = 0; i < res.length; i++) {
