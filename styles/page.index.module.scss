@@ -79,14 +79,14 @@ section.searchBox {
 // **** RESULTS *****
 section.result {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 450px;
 
   gap: 10px;
   padding: 10px;
-  padding-right: 20px;
+  // padding-right: 20px;
 
-  border-radius: 4px;
-  width: 100%;
+  // border-radius: 4px;
+  // width: 100vw;
   background: $pink;
 }
 
@@ -102,22 +102,44 @@ section.result > .item {
   // justify-content: center;
 
   display: grid;
-  grid-template-columns: 40px auto;
+  grid-template-columns: 65px 250px auto;
 
   padding: 5px;
   background: $white;
   border-radius: 4px;
 
   .icon {
-    //
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
 
     .img {
       width: 20px;
     }
   }
 
+  .domain {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+  }
+
   .status {
-    // border: 1px solid black;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+
+    img {
+      padding-left: 7px;
+    }
+
+    div {
+      // padding-bottom: 8px;
+      // margin-bottom: 8px;
+      // border: 1px red solid;
+    }
   }
 }
 
