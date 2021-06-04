@@ -31,9 +31,15 @@ export default function Search() {
         for (let i = 0; i < res.length; i++) {
           const resDot = res[i].data.status[0]
 
-          document.getElementById(`output-${resDot.zone}`).innerHTML = `
-            <${resDot.summary}>${resDot.domain} ${ isAvailable(resDot.summary) }<br />
+          document.getElementById(`output-${resDot.zone}-icon`).innerHTML = `
+            ${ getIcon(resDot.summary) }
           `
+          document.getElementById(`output-${resDot.zone}-status`).innerHTML = `
+            <div class="status-${resDot.summary}">
+              ${resDot.domain} ${ getStatus(resDot.summary) }
+            </div>
+          `
+
         }
       })).catch(errors => {
         console.log(errors)
@@ -44,12 +50,20 @@ export default function Search() {
   }
 
   // Check Domain Available
-  const isAvailable = (summary) => {
+  const getStatus = (summary) => {
     if (summary == 'inactive')
-      return `<img src="../svg/trophy-solid.svg"/> is availible!</div>`
+      return `Availible!`
     // else if (summary == 'active')
     else
-      return `<img src="../svg/car-crash-solid.svg"/> already taken`
+      return `Already Taken`
+  }
+
+  // Get Icon
+  const getIcon = (summary) => {
+    if (summary == 'inactive')
+      return `<img src="../svg/trophy-solid.svg" style="width: 35px;"/>`
+    else
+      return `<img src="../svg/car-crash-solid.svg" style="width: 35px;"/>`
   }
 
   return (

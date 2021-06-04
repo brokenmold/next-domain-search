@@ -98,11 +98,27 @@ section.result {
 }
 
 section.result > .item {
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
+
+  display: grid;
+  grid-template-columns: 40px auto;
+
   padding: 5px;
   background: $white;
   border-radius: 4px;
+
+  .icon {
+    //
+
+    .img {
+      width: 20px;
+    }
+  }
+
+  .status {
+    // border: 1px solid black;
+  }
 }
 
 // **** AVAILABLE & TAKEN ****
@@ -112,15 +128,6 @@ section.result > .item {
   }
 }
 
-// **** AVAILABLE ****
-inactive {
-  // background: green;
-}
-
-// **** TAKEN ****
-active {
-  // background: red;
-}
 
 
 
