@@ -127,31 +127,14 @@ section.result > .item {
 
   .status {
     display: flex;
-    // justify-content: center;
     align-items: center;
     letter-spacing: 1px;
 
     img {
       padding-left: 7px;
     }
-
-    div {
-      // padding-bottom: 8px;
-      // margin-bottom: 8px;
-      // border: 1px red solid;
-    }
   }
 }
-
-// **** AVAILABLE & TAKEN ****
-.item > active, .item > inactive {
-  img {
-    width: 30px;
-  }
-}
-
-
-
 
 
 // ********************
