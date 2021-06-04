@@ -78,38 +78,62 @@ section.searchBox {
 
 // **** RESULTS *****
 section.result {
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 50% 50%;
 
+  gap: 10px;
+  padding: 10px;
+  padding-right: 20px;
+
+  border-radius: 4px;
   width: 100%;
   background: $pink;
+}
 
-  .item {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    padding: 10px;
-    background: $white;
-    border-radius: 4px;
+@media only screen and (max-width: 600px) {
+  section.result {
+    grid-template-columns: 100%;
+    padding-right: 10px;
   }
+}
 
-  // **** AVAILABLE & TAKEN ****
-  .item > active, .item > inactive {
-    img {
-      width: 30px;
-    }
-  }
+section.result > .item {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background: $white;
+  border-radius: 4px;
+}
 
-  // **** AVAILABLE ****
-  inactive {
-    // background: green;
+// **** AVAILABLE & TAKEN ****
+.item > active, .item > inactive {
+  img {
+    width: 30px;
   }
+}
 
-  // **** TAKEN ****
-  active {
-    // background: red;
-  }
+// **** AVAILABLE ****
+inactive {
+  // background: green;
+}
+
+// **** TAKEN ****
+active {
+  // background: red;
+}
+
+
+
+
+// ********************
+// **** Alt Icons *****
+
+.icon_sm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 8px;
+}
+.icon_sm > div {
+  padding: 10px;
 }
