@@ -1,16 +1,17 @@
 import React from 'react'
-import axios from 'axios'
+import { useRouter } from 'next/router'
 
 import style from '../styles/comp.search.module.scss'
 
 export default function SearchBox() {
+  const router = useRouter()
 
   const searchDomain = async event => {
     event.preventDefault()
 
     const searchTerm = event.target.term.value.toLowerCase().replace(/\s+/g, '')
 
-
+    router.push(`/domain/${searchTerm}`)
   }
 
   return (
