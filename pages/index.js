@@ -26,41 +26,6 @@ export default function Home() {
           <SearchBox/>
         </section>
 
-        {/* RESULTS */}
-        <section className={style.result}>
-
-          <div className={style.item} id='output-dev'>
-            <div className={style.icon} id='output-dev-icon'></div>
-            <div className={style.domain} id='output-dev-domain'></div>
-            <div className={style.status} id='output-dev-status'></div>
-          </div>
-
-          <div className={style.item} id='output-io'>
-            <div className={style.icon} id='output-io-icon'></div>
-            <div className={style.domain} id='output-io-domain'></div>
-            <div className={style.status} id='output-io-status'></div>
-          </div>
-
-          <div className={style.item} id='output-com'>
-            <div className={style.icon} id='output-com-icon'></div>
-            <div className={style.domain} id='output-com-domain'></div>
-            <div className={style.status} id='output-com-status'></div>
-          </div>
-
-          <div className={style.item} id='output-net'>
-            <div className={style.icon} id='output-net-icon'></div>
-            <div className={style.domain} id='output-net-domain'></div>
-            <div className={style.status} id='output-net-status'></div>
-          </div>
-
-          <div className={style.item} id='output-org'>
-            <div className={style.icon} id='output-org-icon'></div>
-            <div className={style.domain} id='output-org-domain'></div>
-            <div className={style.status} id='output-org-status'></div>
-          </div>
-
-        </section>
-
         {/* AFFILIATE TAG */}
         {/* <div className={style.digitalOcean}>
           <a href='https://m.do.co/c/cb06502b2c00' target='_blank'><span class='fab fa-digital-ocean fa-2x'/> Powered by DigitalOcean</a>
