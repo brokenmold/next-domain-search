@@ -1,5 +1,4 @@
 import Head from 'next/head'
-// import SearchModule from '../components/results'
 import SearchBox from '../components/searchBox'
 
 import style from '../styles/page.index.module.scss'

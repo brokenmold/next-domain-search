@@ -32,6 +32,8 @@ section.heroBox {
   h4 {
     margin-top: 8px;
   }
+
+  padding-bottom: 3rem;
 }
 
 @media only screen and (max-width: 810px) {
@@ -55,6 +57,8 @@ section.heroBox {
 // **** Search Box ****
 section.searchBox {
   width: 50%;
+
+  padding-bottom: 3rem;
 }
 
 @media only screen and (max-width: 800px) {
