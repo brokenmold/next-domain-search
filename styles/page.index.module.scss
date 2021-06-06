@@ -9,9 +9,12 @@ section.wrapper {
   align-content: center;
   min-height: $container-min-height;
   height: 100%;
-  // width: $app-max-width;
+  width: $app-max-width;
+  max-width: calc(100vw - 50px);
   // border: 1px solid black;
 }
+
+
 
 // ******************
 // **** Hero Box ****
@@ -45,13 +48,25 @@ section.heroBox {
     justify-content: center;
     width: 100%;
 
-    div, h1, h4 {
+    padding-bottom: 1px;
+
+    div {
       margin-left: auto;
       margin-right: auto;
       width: fit-content;
     }
+
+    h1, h4 {
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      // align-content: center;
+      text-align: center;
+    }
   }
 }
+
+
 
 // ********************
 // **** Search Box ****
@@ -63,9 +78,18 @@ section.searchBox {
 
 @media only screen and (max-width: 800px) {
   section.searchBox {
-    width: 100%;
+    width: 90%;
   }
 }
+
+
+
+
+
+
+
+
+
 
 
 // **** Afilliate Tag ****
