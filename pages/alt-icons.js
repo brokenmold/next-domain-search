@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import style from '../styles/page.index.module.scss'
+import style from '../styles/page.alt-icons.module.scss'
 
 export default function Home() {
   return (
