@@ -9,23 +9,22 @@ section.wrapper {
   align-content: center;
   min-height: $container-min-height;
   height: 100%;
-  width: 100%;
-  // width: $app-max-width;
-  background: $pink;
-  // padding: 20px;
-  // border: 1px solid black;
-
+  width: $app-max-width;
+  max-width: calc(100vw - 50px);
 }
+
+
 
 // ******************
 // **** Hero Box ****
 section.heroBox {
-  width: 50%;
+  width: 40%;
+  padding-bottom: 3rem;
 
   .icon {
     padding: 10px;
     font-size: 26px;
-    color: $orange;
+    // color: $orange;
   }
 
   h1 {
@@ -36,18 +35,16 @@ section.heroBox {
   h4 {
     margin-top: 8px;
   }
-
-  padding-bottom: 3rem;
 }
 
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 830px) {
   section.heroBox {
-    // display: flex;
     margin-left: auto;
     margin-right: auto;
     align-content: center;
     justify-content: center;
     width: 100%;
+    padding-bottom: 0rem;
 
     div, h1, h4 {
       margin-left: auto;
@@ -57,46 +54,34 @@ section.heroBox {
   }
 }
 
+
+
 // ********************
-// **** Search Box ****
+// **** Result Box ****
 section.resultBox {
-  width: 50%;
-  // border: 1px solid black;
+  width: 60%;
   padding-bottom: 3rem;
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 830px) {
   section.resultBox {
     width: 100%;
   }
 }
 
 
-// **** RESULTS *****
+// **** CORE RESULTS *****
 section.result {
   display: grid;
-  grid-template-columns: 450px;
-
+  grid-template-columns: 100%;
   gap: 10px;
-  padding: 10px;
-  // padding-right: 20px;
-
-  // border-radius: 4px;
-  // width: 100vw;
-  background: $pink;
 }
 
-@media only screen and (max-width: 600px) {
-  section.result {
-    grid-template-columns: 100%;
-    // padding-right: 10px;
-  }
-}
-
+// **** RESULTS > Items *****
 section.result > .item {
   // display: flex;
-  // justify-content: center;
+  justify-content: center;
 
   display: grid;
   grid-template-columns: 65px 250px auto;
@@ -104,8 +89,16 @@ section.result > .item {
   padding: 5px;
   background: $white;
   border-radius: 4px;
+}
 
-  .icon {
+@media only screen and (max-width: 500px) {
+  section.result > .item {
+    grid-template-columns: 0px 220px auto;
+  }
+}
+
+
+  section.result > .item > .icon {
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -115,14 +108,21 @@ section.result > .item {
     }
   }
 
-  .domain {
+  // Hidden Status Icon on Mobile
+  @media only screen and (max-width: 500px) {
+    section.result > .item > .icon {
+      visibility: hidden;
+    }
+  }
+
+  section.result > .item > .domain {
     display: flex;
     align-items: center;
     font-weight: 500;
     letter-spacing: 2.5px;
   }
 
-  .status {
+  section.result > .item > .status {
     display: flex;
     align-items: center;
     letter-spacing: 1px;
@@ -131,18 +131,3 @@ section.result > .item {
       padding-left: 7px;
     }
   }
-}
-
-
-// ********************
-// **** Alt Icons *****
-
-.icon_sm {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 8px;
-}
-.icon_sm > div {
-  padding: 10px;
-}
