@@ -13,7 +13,7 @@ export default function Home() {
         {/* HERO BOX */}
         <section className={style.heroBox}>
           <div className={style.icon}>
-            <div className='fad fa-sign fa-8x'/>
+            <div className='fas fa-sign fa-8x'/>
           </div>
           <h1>Digital Real Estate</h1>
           <h4>Let’s check out your domain options.</h4>
