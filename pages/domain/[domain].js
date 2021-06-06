@@ -1,8 +1,9 @@
-import React from 'react'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import axios from 'axios'
+// import Search from '../../components/search'
 
-import style from '../styles/comp.results.module.scss'
+import style from '../../styles/page.domain.module.scss'
 
 export default function Results() {
   const router = useRouter()
@@ -101,7 +102,64 @@ export default function Results() {
 
   // **** Make The Call ****
   resDot()
+
+  return (
+    <div>
+      <Head></Head>
+
+      <section className={style.wrapper}>
+
+        {/* HERO BOX */}
+        <section className={style.heroBox}>
+          <div className={style.icon}>
+            <div className='fa fa-dolly fa-8x'/>
+          </div>
+          <h1>Domain Results</h1>
+          <h4>Here's what we're working with..</h4>
+        </section>
+
+        {/* RESULTS */}
+        <section className={style.resultBox}>
+          <section className={style.result}>
+
+            <div className={style.item} id='output-dev'>
+              <div className={style.icon} id='output-dev-icon'></div>
+              <div className={style.domain} id='output-dev-domain'></div>
+              <div className={style.status} id='output-dev-status'></div>
+            </div>
+
+            <div className={style.item} id='output-io'>
+              <div className={style.icon} id='output-io-icon'></div>
+              <div className={style.domain} id='output-io-domain'></div>
+              <div className={style.status} id='output-io-status'></div>
+            </div>
+
+            <div className={style.item} id='output-com'>
+              <div className={style.icon} id='output-com-icon'></div>
+              <div className={style.domain} id='output-com-domain'></div>
+              <div className={style.status} id='output-com-status'></div>
+            </div>
+
+            <div className={style.item} id='output-net'>
+              <div className={style.icon} id='output-net-icon'></div>
+              <div className={style.domain} id='output-net-domain'></div>
+              <div className={style.status} id='output-net-status'></div>
+            </div>
+
+            <div className={style.item} id='output-org'>
+              <div className={style.icon} id='output-org-icon'></div>
+              <div className={style.domain} id='output-org-domain'></div>
+              <div className={style.status} id='output-org-status'></div>
+            </div>
+
+          </section>
+        </section>
+
+      </section>
+    </div>
+  )
 }
+
 
 // Check Domain Available
 const getStatus = (summary, domain) => {

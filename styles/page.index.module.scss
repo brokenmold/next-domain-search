@@ -9,9 +9,8 @@ section.wrapper {
   align-content: center;
   min-height: $container-min-height;
   height: 100%;
-
+  // width: $app-max-width;
   // border: 1px solid black;
-
 }
 
 // ******************
@@ -22,6 +21,7 @@ section.heroBox {
   .icon {
     padding: 10px;
     font-size: 26px;
+    color: $pink;
   }
 
   h1 {
@@ -32,6 +32,8 @@ section.heroBox {
   h4 {
     margin-top: 8px;
   }
+
+  padding-bottom: 3rem;
 }
 
 @media only screen and (max-width: 810px) {
@@ -55,6 +57,8 @@ section.heroBox {
 // **** Search Box ****
 section.searchBox {
   width: 50%;
+
+  padding-bottom: 3rem;
 }
 
 @media only screen and (max-width: 800px) {
@@ -73,79 +77,4 @@ section.searchBox {
   padding-top: 2.8rem;
   font-size: 20px;
   // border: 1px solid white;
-}
-
-
-// **** RESULTS *****
-section.result {
-  display: grid;
-  grid-template-columns: 450px;
-
-  gap: 10px;
-  padding: 10px;
-  // padding-right: 20px;
-
-  // border-radius: 4px;
-  // width: 100vw;
-  background: $pink;
-}
-
-@media only screen and (max-width: 600px) {
-  section.result {
-    grid-template-columns: 100%;
-    padding-right: 10px;
-  }
-}
-
-section.result > .item {
-  // display: flex;
-  // justify-content: center;
-
-  display: grid;
-  grid-template-columns: 65px 250px auto;
-
-  padding: 5px;
-  background: $white;
-  border-radius: 4px;
-
-  .icon {
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-
-    .img {
-      width: 20px;
-    }
-  }
-
-  .domain {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    letter-spacing: 2.5px;
-  }
-
-  .status {
-    display: flex;
-    align-items: center;
-    letter-spacing: 1px;
-
-    img {
-      padding-left: 7px;
-    }
-  }
-}
-
-
-// ********************
-// **** Alt Icons *****
-
-.icon_sm {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 8px;
-}
-.icon_sm > div {
-  padding: 10px;
 }

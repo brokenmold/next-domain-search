@@ -1,0 +1,14 @@
+@import '_vars';
+
+// ********************
+// **** Alt Icons *****
+
+.icon_sm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 8px;
+}
+.icon_sm > div {
+  padding: 10px;
+}
