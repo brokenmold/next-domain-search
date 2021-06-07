@@ -94,6 +94,10 @@ export default function Results() {
         document.getElementById(`output-${resDot.zone}-status`).innerHTML = `
           ${ getStatus(resDot.summary, resDot.domain) }
         `
+
+        document.getElementById(`output-${resDot.zone}-status-img`).innerHTML = `
+          ${ getStatusImg(resDot.summary, resDot.domain) }
+        `
       }
     })).catch(errors => {
       console.log(errors)
@@ -126,30 +130,35 @@ export default function Results() {
               <div className={style.icon} id='output-dev-icon'></div>
               <div className={style.domain} id='output-dev-domain'></div>
               <div className={style.status} id='output-dev-status'></div>
+              <div className={style.statusImg} id='output-dev-status-img'></div>
             </div>
 
             <div className={style.item} id='output-io'>
               <div className={style.icon} id='output-io-icon'></div>
               <div className={style.domain} id='output-io-domain'></div>
               <div className={style.status} id='output-io-status'></div>
+              <div className={style.statusImg} id='output-io-status-img'></div>
             </div>
 
             <div className={style.item} id='output-com'>
               <div className={style.icon} id='output-com-icon'></div>
               <div className={style.domain} id='output-com-domain'></div>
               <div className={style.status} id='output-com-status'></div>
+              <div className={style.statusImg} id='output-com-status-img'></div>
             </div>
 
             <div className={style.item} id='output-net'>
               <div className={style.icon} id='output-net-icon'></div>
               <div className={style.domain} id='output-net-domain'></div>
               <div className={style.status} id='output-net-status'></div>
+              <div className={style.statusImg} id='output-net-status-img'></div>
             </div>
 
             <div className={style.item} id='output-org'>
               <div className={style.icon} id='output-org-icon'></div>
               <div className={style.domain} id='output-org-domain'></div>
               <div className={style.status} id='output-org-status'></div>
+              <div className={style.statusImg} id='output-org-status-img'></div>
             </div>
 
           </section>
@@ -161,13 +170,20 @@ export default function Results() {
 }
 
 
-// Check Domain Available
+// Get Status Message
 const getStatus = (summary, domain) => {
   if (summary == 'inactive')
-    return `Available!  <a href='https://domains.google.com/registrar/search?searchTerm=${domain}' target='_blank'><img src='../svg/cart-arrow-down-solid.svg' style='height: 28px;'/></a>`
-  // else if (summary == 'active')
+    return `Available`
   else
-    return `Already Taken`
+    return `Taken`
+}
+
+// Get Status Img & Link
+const getStatusImg = (summary, domain) => {
+  if (summary == 'inactive')
+    return `<a href='https://domains.google.com/registrar/search?searchTerm=${domain}' target='_blank'><img src='../svg/cart-arrow-down-solid.svg' style='height: 28px;'/></a>`
+  else
+    return ''
 }
 
 // Get Icon

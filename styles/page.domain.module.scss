@@ -68,7 +68,7 @@ section.heroBox {
 // **** Result Box ****
 section.resultBox {
   width: 60%;
-  padding-bottom: 3rem;
+  // padding-bottom: 3rem;
 
 }
 
@@ -88,11 +88,8 @@ section.result {
 
 // **** RESULTS > Items *****
 section.result > .item {
-  // display: flex;
-  justify-content: center;
-
   display: grid;
-  grid-template-columns: 65px 250px auto;
+  grid-template-columns: 65px auto 85px 40px;
 
   padding: 5px;
   background: $white;
@@ -101,7 +98,7 @@ section.result > .item {
 
 @media only screen and (max-width: 500px) {
   section.result > .item {
-    grid-template-columns: 0px 60% auto;
+    grid-template-columns: 10px auto 1px 40px;
   }
 }
 
@@ -130,12 +127,34 @@ section.result > .item {
     letter-spacing: 2.5px;
   }
 
+  // Hidden Domain Style on Mobile
+  @media only screen and (max-width: 500px) {
+    section.result > .item > .domain {
+      letter-spacing: .3px;
+    }
+  }
+
   section.result > .item > .status {
     display: flex;
     align-items: center;
     letter-spacing: 1px;
+    padding-right: 10px;
+    max-width: 100%;
+  }
 
-    img {
-      padding-left: 7px;
+  // Hidden Status Message on Mobile
+  @media only screen and (max-width: 500px) {
+    section.result > .item > .status {
+      visibility: hidden;
+    }
+  }
+
+  serction.result > .item > .statusImg {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .img {
+      justify-content: flex-end;
     }
   }
