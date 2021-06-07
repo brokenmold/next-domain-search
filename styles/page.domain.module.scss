@@ -46,10 +46,18 @@ section.heroBox {
     width: 100%;
     padding-bottom: 0rem;
 
-    div, h1, h4 {
+    div {
       margin-left: auto;
       margin-right: auto;
       width: fit-content;
+      max-width: 100%;
+    }
+
+    h1, h4 {
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      text-align: center;
     }
   }
 }
@@ -93,7 +101,7 @@ section.result > .item {
 
 @media only screen and (max-width: 500px) {
   section.result > .item {
-    grid-template-columns: 0px 220px auto;
+    grid-template-columns: 0px 60% auto;
   }
 }
 
