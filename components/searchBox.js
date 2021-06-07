@@ -7,6 +7,7 @@ import style from '../styles/comp.search.module.scss'
 export default function SearchBox() {
   const router = useRouter()
 
+  // Button > Search > onClick
   const searchDomain = async event => {
     // Prevent onClick Default
     event.preventDefault()
@@ -18,6 +19,7 @@ export default function SearchBox() {
     router.push(`/domain/${searchTerm}`)
   }
 
+  // Button > Random > onClick
   const getRandom = async event => {
     // Prevent onClick Default
     event.preventDefault()
@@ -29,6 +31,7 @@ export default function SearchBox() {
     document.getElementById('term').value = `${rando}`
   }
 
+  // Form > onSubmit
   const preventDefault = async event => {
     // Prevent onSubmit Default
     event.preventDefault()
@@ -50,7 +53,7 @@ export default function SearchBox() {
           </div>
 
           <div className={style.item}>
-            <button onClick={getRandom} className={style.generate} type='generate'>GENERATE</button>
+            <button onClick={getRandom} className={style.generate} type='generate'>RANDOM</button>
           </div>
 
         </form>
