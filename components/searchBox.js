@@ -2,10 +2,17 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import Random from 'project-name-generator'
 
-import style from '../styles/comp.search.module.scss'
+import styleSearchBox from '../styles/comp.searchBox.module.scss'
+import styleSearchBar from '../styles/comp.searchBar.module.scss'
+
+const style = styleSearchBox
 
 export default function SearchBox() {
   const router = useRouter()
+
+  // GET DIR
+  // console.log(router.pathname.split('[')[0])
+  console.log(router.locale)
 
   // Button > Search > onClick
   const searchDomain = async event => {
@@ -41,7 +48,6 @@ export default function SearchBox() {
     <section className={style.wrapper}>
 
       <section className={style.search}>
-        {/* <form onSubmit={searchDomain}> */}
         <form onSubmit={preventDefault}>
 
           <div className={style.item}>

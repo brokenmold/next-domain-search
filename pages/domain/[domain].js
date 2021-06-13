@@ -1,12 +1,16 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import axios from 'axios'
-// import Search from '../../components/search'
 
 import style from '../../styles/page.domain.module.scss'
 
+// console.log(__dirname)
+
+
 export default function Results() {
   const router = useRouter()
+  console.log(router.pathname)
+
   const domain = router.query.domain
   const searchTerm = domain
 
