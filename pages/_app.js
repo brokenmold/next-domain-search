@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import { SearchProvider } from '../components/searchContext'
 
 import '../styles/_global.scss'
 
@@ -19,7 +20,9 @@ export default function App({ Component, pageProps }) {
 
       <div className='containerWrapper'>
         <div className='container'>
-          <Component {...pageProps} />
+          <SearchProvider>
+            <Component {...pageProps} />
+          </SearchProvider>
         </div>
       </div>
 
