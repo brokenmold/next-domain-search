@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSearch } from './searchContext'
 import { useRouter } from 'next/router'
 import Random from 'project-name-generator'
 
@@ -8,39 +9,26 @@ import styleSearchBar from '../styles/comp.searchBar.module.scss'
 const style = styleSearchBox
 
 export default function SearchBox() {
+  const search = useSearch()
   const router = useRouter()
 
-  // GET DIR
-  // console.log(router.pathname.split('[')[0])
-  console.log(router.locale)
+  // console.log(router.locale)
 
-  // Button > Search > onClick
+  // onClick -- Search
   const searchDomain = async event => {
-    // Prevent onClick Default
     event.preventDefault()
-
-    // Format Search Term
     const searchTerm = term.value.toLowerCase().replace(/\s+/g, '')
-
-    // Get Search Results
     router.push(`/domain/${searchTerm}`)
   }
 
-  // Button > Random > onClick
+  // onClick -- Random
   const getRandom = async event => {
-    // Prevent onClick Default
     event.preventDefault()
-
-    // Query Random Term
     const rando = Random().spaced
-
-    // Set Input Value
     document.getElementById('term').value = `${rando}`
   }
 
-  // Form > onSubmit
   const preventDefault = async event => {
-    // Prevent onSubmit Default
     event.preventDefault()
   }
 
@@ -48,7 +36,9 @@ export default function SearchBox() {
     <section className={style.wrapper}>
 
       <section className={style.search}>
-        <form onSubmit={preventDefault}>
+        {/* <form onSubmit={preventDefault}> */}
+
+          {search}
 
           <div className={style.item}>
             <input id='term' type='text' autoComplete='term' required />
@@ -62,7 +52,7 @@ export default function SearchBox() {
             <button onClick={getRandom} className={style.generate} type='generate'>RANDOM</button>
           </div>
 
-        </form>
+        {/* </form> */}
       </section>
 
     </section>
