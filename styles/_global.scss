@@ -175,6 +175,7 @@
   }
 
   // HERO BOX
+
   section.heroBox {
     width: 50%;
 
@@ -222,6 +223,7 @@
   }
 
   // SEARCH BOX
+
   section.searchBox {
     width: 50%;
 
@@ -322,6 +324,7 @@
   }
 
   // HERO BOX
+
   section.heroBox {
     width: 40%;
     padding-bottom: 3rem;
@@ -368,6 +371,7 @@
   }
 
   // RESULT BOX
+
   section.resultBox {
     width: 60%;
   }
@@ -410,6 +414,7 @@
   }
 
   // Hidden Status Icon on Mobile
+
   @media only screen and (max-width: 500px) {
     section.result > .item > .icon {
       visibility: hidden;
@@ -424,6 +429,7 @@
   }
 
   // Hidden Domain Style on Mobile
+
   @media only screen and (max-width: 500px) {
     section.result > .item > .domain {
       letter-spacing: .3px;
@@ -439,6 +445,7 @@
   }
 
   // Hidden Status Message on Mobile
+
   @media only screen and (max-width: 500px) {
     section.result > .item > .status {
       visibility: hidden;
