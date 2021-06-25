@@ -3,6 +3,8 @@ import SearchBox from '../components/searchBox'
 
 import style from '../styles/page.index.module.scss'
 
+const searchStyle = 'search-box'
+
 export default function Home() {
   return (
     <div>

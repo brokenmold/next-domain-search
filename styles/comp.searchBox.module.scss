@@ -16,7 +16,7 @@
     height: 100%;
     width: 100%;
 
-    form {
+    .form {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -28,7 +28,7 @@
       // border: 1px solid black;
     }
 
-    form > .item {
+    .form > .item {
       display: flex;
       justify-content: center;
       width: 100%;

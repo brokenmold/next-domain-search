@@ -4,6 +4,8 @@ import axios from 'axios'
 
 import style from '../../styles/page.domain.module.scss'
 
+const searchStyle = 'search-bar'
+
 // console.log(__dirname)
 
 

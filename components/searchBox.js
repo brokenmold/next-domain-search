@@ -8,6 +8,8 @@ import styleSearchBar from '../styles/comp.searchBar.module.scss'
 
 const style = styleSearchBox
 
+// console.log(searchStyle)
+
 export default function SearchBox() {
   const search = useSearch()
   const router = useRouter()
@@ -17,6 +19,8 @@ export default function SearchBox() {
   // onClick -- Search
   const searchDomain = async event => {
     event.preventDefault()
+
+    // if searchTerm !null
     const searchTerm = term.value.toLowerCase().replace(/\s+/g, '')
     router.push(`/domain/${searchTerm}`)
   }
@@ -36,7 +40,7 @@ export default function SearchBox() {
     <section className={style.wrapper}>
 
       <section className={style.search}>
-        {/* <form onSubmit={preventDefault}> */}
+        <div className={style.form}>
 
           {search}
 
@@ -52,7 +56,7 @@ export default function SearchBox() {
             <button onClick={getRandom} className={style.generate} type='generate'>RANDOM</button>
           </div>
 
-        {/* </form> */}
+        </div>
       </section>
 
     </section>
