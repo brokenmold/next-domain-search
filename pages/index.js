@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import SearchBox from '../components/searchBox'
+import SearchBox from '../components/search'
 
 export default function Home() {
   return (
