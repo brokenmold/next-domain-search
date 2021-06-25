@@ -1,6 +1,5 @@
 import Head from 'next/head'
 
-import style from '../styles/page.alt-icons.module.scss'
 
 export default function Home() {
   return (
@@ -10,7 +9,7 @@ export default function Home() {
 
         <h1>Alt Icons</h1>
 
-        <div className={style.icon_sm}>
+        <div className='icon_sm'>
           <div className='fa fa-sign fa-8x'/>
           <div className='fad fa-sign fa-8x'/>
           <div className='far fa-laptop-house fa-8x'/>
@@ -62,6 +61,20 @@ export default function Home() {
         </div>
 
       </main>
+
+      <style jsx>
+        {`
+          .icon_sm {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 8px;
+          }
+          .icon_sm > div {
+            padding: 10px;
+          }
+        `}
+      </style>
     </div>
   )
 }
