@@ -1,6 +1,5 @@
 @import '_vars';
 
-
 // *****************************************
 // ****  HTML  *****************************
 
@@ -65,10 +64,6 @@
     width: $app-max-width;
   }
 
-  // main {
-  //   flex: 1;
-  // }
-
   // Layout >> Footer
 
   footer {
@@ -109,21 +104,18 @@
     font-size: 2.25rem;
     font-weight: 600;
     line-height: 2.25rem;
-    // padding-bottom: 2.25rem;
   }
 
   h3 {
     font-size: 2.1rem;
     font-weight: 400;
     line-height: 2.1rem;
-    // padding-bottom: 2.1rem;
   }
 
   h4 {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.5rem;
-    // padding-bottom: .4rem;
   }
 
   p {
