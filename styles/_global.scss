@@ -160,7 +160,83 @@
 
 
 // *******************************************
-// ****  SEARCH COMPONENT  *******************
+// ****  PAGE > HOME  ************************
+
+  section.homeWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    min-height: $container-min-height;
+    height: 100%;
+    width: $app-max-width;
+    max-width: calc(100vw - 50px);
+    // border: 1px solid black;
+  }
+
+  // HERO BOX
+  section.heroBox {
+    width: 50%;
+
+    .icon {
+      padding: 10px;
+      font-size: 26px;
+      color: $pink;
+    }
+
+    h1 {
+      margin-top: 8px;
+      margin-bottom: 0px;
+    }
+
+    h4 {
+      margin-top: 8px;
+    }
+
+    padding-bottom: 3rem;
+  }
+
+  @media only screen and (max-width: 810px) {
+    section.heroBox {
+      // display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      align-content: center;
+      justify-content: center;
+      width: 100%;
+      padding-bottom: 1px;
+
+      div {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+      }
+
+      h1, h4 {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        text-align: center;
+      }
+    }
+  }
+
+  // SEARCH BOX
+  section.searchBox {
+    width: 50%;
+
+    padding-bottom: 3rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    section.searchBox {
+      width: 90%;
+    }
+  }
+
+
+// *******************************************
+// ****  COMPONENT > SEARCH  *****************
 
   section.searchWrapper {
     align-items: center;
@@ -228,4 +304,17 @@
         background: $pink;
       }
     }
+  }
+
+
+// *******************************************
+// ****  AFFILIATE TAG  **********************
+
+  .digitalOcean {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 2.8rem;
+    font-size: 20px;
   }
