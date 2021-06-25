@@ -4,11 +4,6 @@ import axios from 'axios'
 
 import style from '../../styles/page.domain.module.scss'
 
-const searchStyle = 'search-bar'
-
-// console.log(__dirname)
-
-
 export default function Results() {
   const router = useRouter()
   console.log(router.pathname)
