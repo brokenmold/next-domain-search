@@ -4,7 +4,6 @@ import axios from 'axios'
 
 export default function Results() {
   const router = useRouter()
-  console.log(router.pathname)
 
   const domain = router.query.domain
   const searchTerm = domain
