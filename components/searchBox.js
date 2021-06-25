@@ -2,7 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import Random from 'project-name-generator'
 
-import style from '../styles/comp.searchBox.module.scss'
+// import style from '../styles/comp.searchBox.module.scss'
 
 export default function SearchBox() {
   const router = useRouter()
@@ -24,21 +24,21 @@ export default function SearchBox() {
   }
 
   return (
-    <section className={style.wrapper}>
+    <section className='searchWrapper'>
 
-      <section className={style.search}>
-        <div className={style.form}>
+      <section className='search'>
+        <div className='form'>
 
-          <div className={style.item}>
+          <div className='item'>
             <input id='term' type='text' autoComplete='term' required />
           </div>
 
-          <div className={style.item}>
-            <button onClick={searchDomain} className={style.search} type='submit'>SEARCH</button>
+          <div className='item'>
+            <button onClick={searchDomain} className='search' type='submit'>SEARCH</button>
           </div>
 
-          <div className={style.item}>
-            <button onClick={getRandom} className={style.generate} type='generate'>RANDOM</button>
+          <div className='item'>
+            <button onClick={getRandom} className='generate' type='generate'>RANDOM</button>
           </div>
 
         </div>

@@ -1,7 +1,7 @@
 @import '_vars';
 
   // **** COMPONENT ****
-  section.wrapper {
+  section.searchWrapper {
     align-items: center;
     width: 100%;
     height: 100%;
@@ -24,8 +24,6 @@
       width: 100%;
 
       margin-bottom: 20px;
-
-      // border: 1px solid black;
     }
 
     .form > .item {
