@@ -2,8 +2,6 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 
-import style from '../../styles/page.domain.module.scss'
-
 export default function Results() {
   const router = useRouter()
   console.log(router.pathname)
@@ -112,11 +110,11 @@ export default function Results() {
     <div>
       <Head></Head>
 
-      <section className={style.wrapper}>
+      <section className='wrapper'>
 
         {/* HERO BOX */}
-        <section className={style.heroBox}>
-          <div className={style.icon}>
+        <section className='heroBox'>
+          <div className='icon'>
             <div className='fa fa-dolly fa-8x'/>
           </div>
           <h1>Domain Results</h1>
@@ -124,42 +122,42 @@ export default function Results() {
         </section>
 
         {/* RESULTS */}
-        <section className={style.resultBox}>
-          <section className={style.result}>
+        <section className='resultBox'>
+          <section className='result'>
 
-            <div className={style.item} id='output-dev'>
-              <div className={style.icon} id='output-dev-icon'></div>
-              <div className={style.domain} id='output-dev-domain'></div>
-              <div className={style.status} id='output-dev-status'></div>
-              <div className={style.statusImg} id='output-dev-status-img'></div>
+            <div className='item' id='output-dev'>
+              <div className='icon' id='output-dev-icon'></div>
+              <div className='domain' id='output-dev-domain'></div>
+              <div className='status' id='output-dev-status'></div>
+              <div className='statusImg' id='output-dev-status-img'></div>
             </div>
 
-            <div className={style.item} id='output-io'>
-              <div className={style.icon} id='output-io-icon'></div>
-              <div className={style.domain} id='output-io-domain'></div>
-              <div className={style.status} id='output-io-status'></div>
-              <div className={style.statusImg} id='output-io-status-img'></div>
+            <div className='item' id='output-io'>
+              <div className='icon' id='output-io-icon'></div>
+              <div className='domain' id='output-io-domain'></div>
+              <div className='status' id='output-io-status'></div>
+              <div className='statusImg' id='output-io-status-img'></div>
             </div>
 
-            <div className={style.item} id='output-com'>
-              <div className={style.icon} id='output-com-icon'></div>
-              <div className={style.domain} id='output-com-domain'></div>
-              <div className={style.status} id='output-com-status'></div>
-              <div className={style.statusImg} id='output-com-status-img'></div>
+            <div className='item' id='output-com'>
+              <div className='icon' id='output-com-icon'></div>
+              <div className='domain' id='output-com-domain'></div>
+              <div className='status' id='output-com-status'></div>
+              <div className='statusImg' id='output-com-status-img'></div>
             </div>
 
-            <div className={style.item} id='output-net'>
-              <div className={style.icon} id='output-net-icon'></div>
-              <div className={style.domain} id='output-net-domain'></div>
-              <div className={style.status} id='output-net-status'></div>
-              <div className={style.statusImg} id='output-net-status-img'></div>
+            <div className='item' id='output-net'>
+              <div className='icon' id='output-net-icon'></div>
+              <div className='domain' id='output-net-domain'></div>
+              <div className='status' id='output-net-status'></div>
+              <div className='statusImg' id='output-net-status-img'></div>
             </div>
 
-            <div className={style.item} id='output-org'>
-              <div className={style.icon} id='output-org-icon'></div>
-              <div className={style.domain} id='output-org-domain'></div>
-              <div className={style.status} id='output-org-status'></div>
-              <div className={style.statusImg} id='output-org-status-img'></div>
+            <div className='item' id='output-org'>
+              <div className='icon' id='output-org-icon'></div>
+              <div className='domain' id='output-org-domain'></div>
+              <div className='status' id='output-org-status'></div>
+              <div className='statusImg' id='output-org-status-img'></div>
             </div>
 
           </section>
