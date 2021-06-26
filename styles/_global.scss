@@ -288,23 +288,22 @@
 // *******************************************
 // ****  COMPONENT > SEARCH  *****************
 
-  // @@@@ SEARCH-BOX
+  // SEARCH-BOX
   .searchBox {
-    //
+    .searchWrapper {
+      height: 100%;
+    }
   }
 
-
-  // @@@@ SEARCH-BAR
+  // SEARCH-BAR
   .searchBar {
     //
   }
 
-
-  // COMPONET
+  // COMPONENT
   section.searchWrapper {
     align-items: center;
     width: 100%;
-    height: 100%;
   }
 
   section.search {
@@ -321,7 +320,6 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-
       margin-bottom: 20px;
     }
 
@@ -373,15 +371,20 @@
 // *******************************************
 // ****  PAGE > RESULTS  *********************
 
+  // SEARCH-BAR
+  .searchBar {
+    //
+  }
+
   section.resultWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    min-height: $container-min-height;
-    // height: 100%;
+    // min-height: $container-min-height;
     width: $app-max-width;
     max-width: calc(100vw - 50px);
+    margin-top: 1rem;
   }
 
   // HERO BOX
@@ -435,6 +438,7 @@
 
   section.resultBox {
     width: 60%;
+    margin-top: 2rem;
   }
 
   @media only screen and (max-width: 830px) {

@@ -17,7 +17,7 @@ export default function Home() {
 
         </section>
 
-        <section className='searchComponent'>
+        <section className='searchComponent searchBox'>
           <Search/>
         </section>
 
