@@ -379,7 +379,7 @@
     justify-content: center;
     align-content: center;
     min-height: $container-min-height;
-    height: 100%;
+    // height: 100%;
     width: $app-max-width;
     max-width: calc(100vw - 50px);
   }
