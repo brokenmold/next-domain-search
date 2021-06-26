@@ -113,7 +113,7 @@ export default function Results() {
       <section className='resultWrapper'>
         {/* SEARCH BAR */}
         {/* <section className='searchBar'></section> */}
-        {/* <Search/> */}
+        <Search/>
 
         {/* HERO BOX */}
         <section className='heroBox'>
