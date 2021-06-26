@@ -272,14 +272,14 @@
 
   // SEARCH BOX
 
-  section.searchBox {
+  section.searchComponent {
     width: 50%;
 
     padding-bottom: 3rem;
   }
 
   @media only screen and (max-width: 800px) {
-    section.searchBox {
+    section.searchComponent {
       width: 90%;
     }
   }
@@ -288,6 +288,19 @@
 // *******************************************
 // ****  COMPONENT > SEARCH  *****************
 
+  // @@@@ SEARCH-BOX
+  .searchBox {
+    //
+  }
+
+
+  // @@@@ SEARCH-BAR
+  .searchBar {
+    //
+  }
+
+
+  // COMPONET
   section.searchWrapper {
     align-items: center;
     width: 100%;
@@ -360,7 +373,7 @@
 // *******************************************
 // ****  PAGE > RESULTS  *********************
 
-  section.wrapper {
+  section.resultWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -373,7 +386,7 @@
 
   // HERO BOX
 
-  section.heroBox {
+  section.resultWrapper > section.heroBox {
     width: 40%;
     padding-bottom: 3rem;
 
@@ -394,7 +407,7 @@
   }
 
   @media only screen and (max-width: 830px) {
-    section.heroBox {
+    section.resultWrapper > section.heroBox {
       margin-left: auto;
       margin-right: auto;
       align-content: center;
@@ -500,14 +513,9 @@
     }
   }
 
-  serction.result > .item > .statusImg {
+  section.result > .item > .statusImg {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-
-    .img {
-      justify-content: flex-end;
-    }
   }
 
 

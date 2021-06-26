@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import SearchBox from '../components/search'
+import Search from '../components/search'
 
 export default function Home() {
   return (
@@ -17,8 +17,8 @@ export default function Home() {
 
         </section>
 
-        <section className='searchBox'>
-          <SearchBox/>
+        <section className='searchComponent'>
+          <Search/>
         </section>
 
         {/* <div className={style.digitalOcean}>

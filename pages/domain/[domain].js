@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import axios from 'axios'
+import Search from '../../components/search'
 
 export default function Results() {
   const router = useRouter()
@@ -109,7 +110,10 @@ export default function Results() {
     <div>
       <Head></Head>
 
-      <section className='wrapper'>
+      <section className='resultWrapper'>
+        {/* SEARCH BAR */}
+        {/* <section className='searchBar'></section> */}
+        {/* <Search/> */}
 
         {/* HERO BOX */}
         <section className='heroBox'>

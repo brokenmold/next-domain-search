@@ -4,7 +4,7 @@ import Random from 'project-name-generator'
 
 // import style from '../styles/comp.searchBox.module.scss'
 
-export default function SearchBox() {
+export default function Search() {
   const router = useRouter()
 
   // onClick -- Search
