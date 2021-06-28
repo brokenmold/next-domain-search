@@ -288,18 +288,6 @@
 // *******************************************
 // ****  COMPONENT > SEARCH  *****************
 
-  // SEARCH-BOX
-  .searchBox {
-    .searchWrapper {
-      height: 100%;
-    }
-  }
-
-  // SEARCH-BAR
-  .searchBar {
-    //
-  }
-
   // COMPONENT
   section.searchWrapper {
     align-items: center;
@@ -353,6 +341,7 @@
         border: 0;
         font-size: 15px;
         letter-spacing: 3px;
+        padding-right: 3px;
         color: $white;
         cursor: pointer;
       }
@@ -367,14 +356,77 @@
     }
   }
 
-
-// *******************************************
-// ****  PAGE > RESULTS  *********************
+  // SEARCH-BOX
+  .searchBox {
+    .searchWrapper {
+      height: 100%;
+    }
+  }
 
   // SEARCH-BAR
   .searchBar {
-    //
+    section.search {
+      //
+
+      .form {
+        flex-wrap: nowrap;
+
+        .input {
+          width: 60%;
+        }
+        .button {
+          width: 20%;
+        }
+
+        input {
+          width: 90%;
+          // max-width: 90%;
+          padding: 0 30px;
+          padding-right: 20px;
+        }
+
+        button {
+          // width: 100%;
+          max-width: 90%;
+        }
+
+        @media only screen and (max-width: 830px) {
+          input {
+            height: 50px;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+          }
+          button {
+            letter-spacing: 1.5px;
+          }
+        }
+
+        @media only screen and (max-width: 500px) {
+          input {
+            height: 40px;
+            font-size: 1rem;
+            letter-spacing: 1.2px;
+          }
+          button {
+            font-size: 13px;
+            letter-spacing: .5px;
+          }
+        }
+      }
+    }
   }
+
+  @media only screen and (max-width: 830px) {
+    .searchBar > .search > .form > button {
+      font-size: 10px;
+      letter-spacing: 0px;
+      padding-right: 3px;
+    }
+  }
+
+
+// *******************************************
+// ****  PAGE > RESULTS  *********************
 
   section.resultWrapper {
     display: flex;

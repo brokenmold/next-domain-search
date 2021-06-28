@@ -110,7 +110,9 @@ export default function Results() {
     <div>
       <Head></Head>
 
-      <Search/>
+      <section className='searchBar'>
+        <Search/>
+      </section>
 
       <section className='resultWrapper'>
         {/* SEARCH BAR */}

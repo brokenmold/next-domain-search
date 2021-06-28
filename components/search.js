@@ -29,15 +29,15 @@ export default function Search() {
       <section className='search'>
         <div className='form'>
 
-          <div className='item'>
+          <div className='item input'>
             <input id='term' type='text' autoComplete='term' required />
           </div>
 
-          <div className='item'>
+          <div className='item button'>
             <button onClick={searchDomain} className='search' type='submit'>SEARCH</button>
           </div>
 
-          <div className='item'>
+          <div className='item button'>
             <button onClick={getRandom} className='generate' type='generate'>RANDOM</button>
           </div>
 
